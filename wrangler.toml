@@ -1,6 +1,6 @@
-name = "random-url-redirect"
-type = "javascript"
-account_id = ""
+name = "paridhikhaitan"
+type = "webpack"
+account_id = "24e443449b4f8dc48ea8d57a880047ec"
 workers_dev = true
 route = ""
 zone_id = ""

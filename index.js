@@ -3,6 +3,8 @@
  * School: University of California, San Diego
  * Position: FullStack Internship
  * Description: A program that randomly sends users to one of two websites
+ * Notes: It was really interesting to use Cloudflare's APIs. They are super powerful
+ * specially the HTML Rewriter one, and I'll continue using it even after the project
  */
 
 //The base url that fetches both the variants
@@ -44,7 +46,6 @@ async function handleRequest(request) {
     })
     .then(response => {
       variantsArray = response.variants;
-      console.log(variantsArray);
     })
     .catch(error => console.log("Unable to fetch: ", error));
 
@@ -103,8 +104,6 @@ async function cookieCheck(request) {
 /* From HTML Rewritter: Changes the inner content of the specified elements */
 class ElementHandler {
   element(element) {
-    console.log(`Incoming element: ${element.tagName}`);
-
     //Changes the main title tag, keeps it consistent across both versions
     if (element.tagName === "title") {
       element.setInnerContent("Paridhi's Take-Home");
